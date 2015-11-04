@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gXN-2X-EF5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ColorCell" id="gXN-2X-EF5">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gXN-2X-EF5" id="buL-wK-cTJ">
@@ -28,7 +28,16 @@
                             <outlet property="delegate" destination="uqJ-zh-Vs6" id="r3p-gW-2Ze"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Hidden Menu" id="eWm-lw-ZPk"/>
+                    <navigationItem key="navigationItem" title="Hidden Menu" id="eWm-lw-ZPk">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="0VT-G7-tm8">
+                            <connections>
+                                <action selector="onEdit:" destination="uqJ-zh-Vs6" id="jmm-5y-sRE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnEdit" destination="0VT-G7-tm8" id="hUM-z3-kN7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMO-gR-li3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
